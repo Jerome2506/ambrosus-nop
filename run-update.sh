@@ -33,7 +33,8 @@ if [ 16 -gt $BLOCKHAIN_DB_VERSION ] &&  [ "$NETWORK_ENV" == "ambnet-test" ]; the
     cd 3.1-db-upgrade-tool
     docker container stop parity
     echo "I AGREE" | cargo run ../$BLOCKHAIN_DB_UPDATE_PATH
-    rm -rf 3.1-db-upgrade-tool
+    cd ..
+	 rm -rf 3.1-db-upgrade-tool
 fi
 
 yarn
